@@ -14,35 +14,6 @@ module.exports = {
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
-      // {
-      //   test: /\.jsx?$/,
-      //   include: [
-      //     path.resolve(__dirname, "app")
-      //   ],
-      //   exclude: [
-      //     path.resolve(__dirname, "app/demo-files")
-      //   ],
-      //   issuer: { test, include, exclude },
-      //   enforce: "pre",
-      //   enforce: "post",
-      //   loader: "babel-loader",
-      //   options: {
-      //     presets: ["es2015"]
-      //   },
-      // },
-      // {
-      //   test: /\.html$/,
-      //   test: "\.html$"
-      //   use: [
-      //     "htmllint-loader",
-      //     {
-      //       loader: "html-loader",
-      //       options: {
-      //       }
-      //     }
-      //   ]
-      // },
-
     ],
   },
 
@@ -57,7 +28,6 @@ module.exports = {
     // 使用的扩展名
 
     alias: {
-
       "module": "new-module",
 
       "only-module$": "new-module",
@@ -65,16 +35,6 @@ module.exports = {
       "module": path.resolve(__dirname, "app/third/module.js"),
     },
   },
-
-  // performance: {
-  //   hints: "warning", // 枚举
-  //   maxAssetSize: 200000, // 整数类型（以字节为单位）
-  //   maxEntrypointSize: 400000, // 整数类型（以字节为单位）
-  //   assetFilter: function(assetFilename) {
-  //     // 提供资源文件名的断言函数
-  //     return assetFilename.endsWith('.css') || assetFilename.endsWith('.js');
-  //   }
-  // },
 
   devtool: "source-map", // enum
   // 通过在浏览器调试工具(browser devtools)中添加元信息(meta info)增强调试
@@ -95,6 +55,7 @@ module.exports = {
   stats: "errors-only",
   // 精确控制要显示的 bundle 信息
 
+  // 使用dev server配置类nginx的反向代理
   devServer: {
     proxy: { // proxy URLs to backend development server
       '/api': 'http://localhost:3000'
@@ -105,9 +66,9 @@ module.exports = {
     hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
     https: false, // true for self-signed, object for cert authority
     noInfo: true, // only errors & warns on hot reload
-    // ...
   },
 
+  // 常用的htmlwebpack插件，很方便的以一个html文件为模版嵌入script标签
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html'

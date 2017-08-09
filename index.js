@@ -1,9 +1,14 @@
+import { Tools } from './src/tools'
+
 class Walle {
   constructor() {
     this.dom = document.querySelector('#app');
     this.data = window.data;
     this.regex = /\{\{.+\}\}/;
     this.render();
+
+    var t = new Tools();
+    console.log(t.math());
   }
 
   render() {
@@ -38,7 +43,6 @@ class Walle {
 
     return res;
   }
-
 }
 
 var walle = new Walle();
