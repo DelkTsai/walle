@@ -79,6 +79,8 @@ module.exports = __webpack_require__(1);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _tools = __webpack_require__(2);
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Walle = function () {
@@ -89,10 +91,13 @@ var Walle = function () {
     this.data = window.data;
     this.regex = /\{\{.+\}\}/;
     this.render();
+
+    var t = new _tools.Tools();
+    console.log(t.math());
   }
 
   _createClass(Walle, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       // 遍历属性s
       for (var i = 0; i < this.dom.attributes.length; i++) {
@@ -111,7 +116,7 @@ var Walle = function () {
       // v-if v-show v-for ......
     }
   }, {
-    key: "attrMapValue",
+    key: 'attrMapValue',
     value: function attrMapValue(str, data) {
       var res = "__none__";
       var keys = str.replace("{{", '').replace('}}', '').trim().split('.');
@@ -133,6 +138,48 @@ var Walle = function () {
 
 var walle = new Walle();
 
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Tools = function () {
+  function Tools() {
+    _classCallCheck(this, Tools);
+
+    console.log('tools constructor');
+  }
+
+  _createClass(Tools, [{
+    key: 'time',
+    value: function time() {
+      if (true) {
+        return new Date();
+      }
+    }
+  }, {
+    key: 'math',
+    value: function math() {
+      return 111;
+      // return Math.random()
+    }
+  }]);
+
+  return Tools;
+}();
+
+exports.Tools = Tools;
+
 /***/ })
 /******/ ]);
-//# sourceMappingURL=bundle.js.map
+//# sourceMappingURL=bundle.ce74a28dbef2ca7e32c5.js.map

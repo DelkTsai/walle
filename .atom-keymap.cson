@@ -1,0 +1,9 @@
+'atom-text-editor':
+  'ctrl-alt-d': 'editor:delete-to-end-of-subword'
+  'cmd-e': 'editor:delete-line'
+  'cmd-alt-l': 'find-and-replace:select-next'
+  'alt-cmd-l': 'atom-beautify:beautify-editor'
+  'cmd-d': 'editor:delete-line'
+
+'.platform-darwin':
+  'cmd-i': 'tree-view:reveal-active-file'

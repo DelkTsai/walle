@@ -1,4 +1,6 @@
-import { Tools } from './src/tools'
+import {
+  Tools
+} from '#/tools'
 
 class Walle {
   constructor() {

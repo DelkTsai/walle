@@ -7,13 +7,19 @@
 4. 虚拟dom
 5. 组件嵌套
 
-### Webpack setup: 构建打包，本地开发－热加载，Babel ES6+
-1. npm i webpack webpack-dev-server
-2. Webpack DOC: https://doc.webpack-china.org/configuration/
-3. npm install --save-dev html-webpack-plugin
-4. HtmlWebpackPlugin DOC: https://github.com/jantimon/html-webpack-plugin#configuration
-5. npm install --save-dev babel-loader babel-core babel-preset-env
-6. Babel DOC: http://babeljs.io/docs/setup/#installation
+### Webpack: 集成配置，构建打包，本地开发－热加载，Babel ES6+
+- npm i webpack webpack-dev-server
+- npm install --save-dev html-webpack-plugin
+- npm install --save-dev babel-loader babel-core babel-preset-env
+- Webpack DOC: https://doc.webpack-china.org/configuration/
+- HtmlWebpackPlugin DOC: https://github.com/jantimon/html-webpack-plugin#configuration
+- Babel DOC: http://babeljs.io/docs/setup/#installation
+- 在根目录下添加 webpack.config.js .babelrc文件，再进行webpack plugin配置
 
-### .editorconfig: 统一代码风格
-1. DOC: http://editorconfig.org/
+### .editorconfig: 统一代码风格，排版
+- DOC: http://editorconfig.org/
+- 在根目录添加 .editorconfig 文件即可
+
+### eslint: JS代码规范校验，语法
+- DOC: http://eslint.cn/docs/user-guide/configuring
+- eslint集成babel webpack git: http://www.cnblogs.com/le0zh/p/5619350.html
