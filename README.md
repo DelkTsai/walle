@@ -22,4 +22,4 @@
 
 ### eslint: JS代码规范校验，语法
 - DOC: http://eslint.cn/docs/user-guide/configuring
-- eslint集成babel webpack git: http://www.cnblogs.com/le0zh/p/5619350.html
+- eslint集成webpack: http://www.cnblogs.com/le0zh/p/5619350.html

@@ -1,20 +1,18 @@
 class Tools {
-  constructor() {
-    console.log('tools constructor');
-  }
+	constructor() {
+		// console.log('tools constructor');
+	}
 
-  time() {
-    if (1 == 1) {
-      return new Date()
-    }
-  }
+	time() {
+		return 222
+	}
 
-  math() {
-    return 111;
-    // return Math.random()
-  }
+	math() {
+		return 333;
+		// return Math.random()
+	}
 }
 
 export {
-  Tools
+	Tools
 };
