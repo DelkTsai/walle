@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	// 入口文件
 	entry: [
-		"./index.js",
+		"./src/index.js",
 	], // string | object | array
 
 	// 出口：打包文件
@@ -85,7 +85,7 @@ module.exports = {
 	// 常用的htmlwebpack插件，很方便的以一个html文件为模版嵌入script标签
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './index.html'
+			template: './src/index.html'
 		})
 	]
 }
