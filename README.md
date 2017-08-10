@@ -1,5 +1,7 @@
 ## Walle
 
+[![Build Status](https://travis-ci.org/zhentaoo/walle.svg?branch=master)](https://travis-ci.org/zhentaoo/walle)
+
 ### Feature
 1. render函数
 2. 指令解析
@@ -23,3 +25,7 @@
 ### eslint: JS代码规范校验，语法
 - DOC: http://eslint.cn/docs/user-guide/configuring
 - eslint集成webpack: http://www.cnblogs.com/le0zh/p/5619350.html
+
+### travis: 持续集成
+- DOC: https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
+- https://travis-ci.org/zhentaoo/walle
