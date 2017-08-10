@@ -1,6 +1,6 @@
 import {
 	Tools
-} from './tools/tools.js'
+} from './utils/tools.js'
 
 class Walle {
 	constructor() {

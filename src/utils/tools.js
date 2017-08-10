@@ -3,13 +3,8 @@ class Tools {
 		// console.log('tools constructor');
 	}
 
-	time() {
-		return 222
-	}
-
-	math() {
-		return 333;
-		// return Math.random()
+	random() {
+		return Math.random()
 	}
 }
 
