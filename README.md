@@ -1,4 +1,4 @@
-## Walle
+## Walle: 类VUE的前端框架，施工中，欢迎加入....
 
 [![Build Status](https://travis-ci.org/zhentaoo/walle.svg?branch=master)](https://travis-ci.org/zhentaoo/walle)
 
