@@ -28,6 +28,7 @@
   - webpack集成eslint: http://www.cnblogs.com/le0zh/p/5619350.html
 
 5. 集成mocha
+  - npm install --save-dev mocha
   - npm install --save-dev babel-polyfill
 
 ### editorconfig: 统一代码风格，排版

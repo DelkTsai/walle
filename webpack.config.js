@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+var config = {
 	// 入口文件
 	entry: [
 		"./src/index.js",
@@ -10,7 +10,7 @@ module.exports = {
 	// 出口：打包文件
 	output: {
 		path: path.resolve(__dirname, "dist"), // string
-		filename: "bundle.js", // string
+		filename: "walle.js", // string
 	},
 
 	// 模块规则
@@ -82,10 +82,18 @@ module.exports = {
 		noInfo: true,
 	},
 
-	// 常用的htmlwebpack插件，很方便的以一个html文件为模版嵌入script标签
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: './src/index.html'
-		})
-	]
+	plugins: []
 }
+
+var NODE_ENV = process.env.NODE_ENV
+console.log('node_env:', NODE_ENV);
+
+// 开发过程以exmaple为模版，生成环境只编译打包js
+if (NODE_ENV == 'dev') {
+	// 常用的htmlwebpack插件，很方便的以一个html文件为模版嵌入script标签
+	config.plugins.push(new HtmlWebpackPlugin({
+		template: './example/dev.html'
+	}))
+}
+
+module.exports = config;

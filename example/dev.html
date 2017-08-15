@@ -4,12 +4,17 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+  </script>
   <script type="text/javascript">
     window.data = {
       href : 'www.baidu.com',
       show: false,
       text: '点我'
     }
+    setTimeout(function () {
+      data.text = 'i am change'
+      console.log(data.text);
+    }, 1000)
   </script>
   <body>
     <a

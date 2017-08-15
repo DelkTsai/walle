@@ -10,7 +10,7 @@ class Walle {
 		this.render();
 
 		var t = new Tools();
-		console.log(t.math());
+		console.log(t.random());
 	}
 
 	render() {
